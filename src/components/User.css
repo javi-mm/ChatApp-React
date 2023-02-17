@@ -1,0 +1,38 @@
+.currentuser {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  color: aliceblue;
+  background-color: #16386b;
+}
+.currentuser_left {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.currentuser_left_imagename {
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.currentuser_right {
+  display: flex;
+  width: 75%;
+
+  justify-content: center;
+}
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.currentuser_button {
+  height: 30px;
+  width: 60px;
+  border-radius: 10px;
+  background-color: #83aff1;
+}

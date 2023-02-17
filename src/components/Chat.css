@@ -1,0 +1,39 @@
+.chat {
+  width: 100%;
+  height: 700px;
+  overflow: scroll;
+  padding-top: 20px;
+  background-color: #e3e2e2;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.chat::-webkit-scrollbar {
+  display: none; /* make scrollbar transparent */
+}
+
+.chat_sin_mensajes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3e2e2;
+  width: 100%;
+  height: 700px;
+}
+.mensaje {
+  font-size: 20px;
+  color: rgb(25, 25, 25);
+}
+
+/* Tablet */
+@media (max-width: 935px) {
+  .chat {
+    width: 100%;
+    height: 600px;
+  }
+}
+@media (max-height: 935px) {
+  .chat {
+    height: 600px;
+  }
+}

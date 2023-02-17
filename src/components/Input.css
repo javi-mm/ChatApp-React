@@ -1,0 +1,25 @@
+.input_wrap {
+  display: flex;
+  flex: 1 0;
+  border-bottom: 2px solid #16386b;
+}
+.input {
+  width: 85%;
+  border: none;
+  outline: none;
+  color: #2f2d52;
+  font-size: 18px;
+  text-indent: 2px;
+}
+button {
+  width: 15%;
+  border: none;
+  color: aliceblue;
+  background-color: #16386b;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+button:hover,
+button:active {
+  background-color: #5a88ce;
+}

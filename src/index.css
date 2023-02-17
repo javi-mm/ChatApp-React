@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Gentium";
+  src: url("./fonts/GentiumBookPlus-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gentium", sans-serif;
+}
