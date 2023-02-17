@@ -47,5 +47,6 @@
 @media (max-height: 935px) {
   .card {
     height: 700px;
+    width: 750px;
   }
 }
