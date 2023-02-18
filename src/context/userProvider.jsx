@@ -4,7 +4,7 @@ import { auth } from "../../firebase";
 import { AuthContext } from "./usercontext";
 
 const AuthContextProvider = (props) => {
-  const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState(null);
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);

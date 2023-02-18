@@ -28,39 +28,31 @@
 }
 
 /* Tablet */
-@media (max-width: 935px) {
-  .chat {
-    height: 600px;
-  }
-  .chat_sin_mensajes {
-    height: 600px;
-  }
-}
 @media (max-height: 935px) {
   .chat {
-    height: 600px;
+    height: 650px;
   }
   .chat_sin_mensajes {
-    height: 600px;
+    height: 650px;
   }
 }
 
 /* Tablet Pequeña / Móvil Grande*/
 @media (max-height: 775px) {
   .chat {
-    height: 500px;
+    height: 600px;
   }
   .chat_sin_mensajes {
-    height: 500px;
+    height: 600px;
   }
 }
 
 /* Móvil */
 @media (max-width: 675px) {
   .chat {
-    height: 640px;
+    height: 650px;
   }
   .chat_sin_mensajes {
-    height: 640px;
+    height: 650px;
   }
 }
