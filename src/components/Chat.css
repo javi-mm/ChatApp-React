@@ -56,3 +56,11 @@
     height: 650px;
   }
 }
+@media (max-width: 575px) {
+  .chat {
+    height: 600px;
+  }
+  .chat_sin_mensajes {
+    height: 600px;
+  }
+}
