@@ -17,3 +17,32 @@ img {
   height: 40px;
   border-radius: 50%;
 }
+.userphoto {
+  position: relative;
+  display: flex;
+}
+.status {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid #3b3b3b;
+  top: 70%;
+}
+
+.online {
+  background-color: rgb(25, 161, 25);
+}
+.offline {
+  background-color: #ccc;
+}
+
+/* Móvil */
+@media (max-width: 675px) {
+  .sidechat_username {
+    display: none;
+  }
+  /* .sidechat {
+    justify-content: center;
+  } */
+}

@@ -36,3 +36,17 @@ img {
   border-radius: 10px;
   background-color: #83aff1;
 }
+
+/* Móvil */
+@media (max-width: 675px) {
+  .currentuser_left_username {
+    display: none;
+  }
+  .currentuser_left {
+    gap: 5px;
+    width: 42%;
+  }
+  .currentuser_right {
+    width: 58%;
+  }
+}

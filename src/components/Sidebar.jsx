@@ -13,25 +13,25 @@ import { db } from "../../firebase";
 import { AuthContext } from "../context/usercontext";
 import { getCollection } from "../helpers/functions";
 
-const Sidebar = (props) => {
+const Sidebar = () => {
   const { email } = useContext(AuthContext);
   const [chatList, setChatList] = useState([]);
 
-  useEffect(() => {
-    const helperFn = async (email) => {
-      const userChatsRef = collection(db, "chats");
-      const q = query(userChatsRef, where("users", "array-contains", email));
-      try {
-        const querySnapshot = await getDocs(q);
-        setChatList([]);
-        querySnapshot.forEach((doc) => {
-          setChatList((prevState) => [...prevState, doc.data()]);
-        });
-      } catch (error) {
-        setError(true);
-      }
-    };
+  const helperFn = async (email) => {
+    const userChatsRef = collection(db, "chats");
+    const q = query(userChatsRef, where("users", "array-contains", email));
+    try {
+      const querySnapshot = await getDocs(q);
+      setChatList([]);
+      querySnapshot.forEach((doc) => {
+        setChatList((prevState) => [...prevState, doc.data()]);
+      });
+    } catch (error) {
+      setError(true);
+    }
+  };
 
+  useEffect(() => {
     if (!email) {
       return;
     }

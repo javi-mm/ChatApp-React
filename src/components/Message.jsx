@@ -1,12 +1,17 @@
 import "./Message.css";
 import React, { useContext } from "react";
 import { AuthContext } from "../context/usercontext";
+import { secondsToDate } from "../helpers/functions";
 import { Timestamp } from "firebase/firestore";
 
 const Message = (props) => {
   const currentUser = useContext(AuthContext);
-
-  if (!currentUser) return;
+  const messageTime = secondsToDate(props.date?.seconds);
+  const messageTimeSeconds =
+    messageTime.getMinutes().toString().length == 1
+      ? "0" + messageTime.getMinutes()
+      : messageTime.getMinutes();
+  const finalMessageTime = messageTime.getHours() + ":" + messageTimeSeconds;
   return (
     <div
       key={props.id}
@@ -22,8 +27,8 @@ const Message = (props) => {
         }`}
       >
         {props.text}
+        <div className="message_date">{props.date ? finalMessageTime : ""}</div>
       </div>
-      {/* <div>{props.date ? props.date.nanoseconds : ""}</div> */}
     </div>
   );
 };

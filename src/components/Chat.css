@@ -3,6 +3,8 @@
   height: 700px;
   overflow: scroll;
   padding-top: 20px;
+  color: rgb(225, 222, 219);
+
   background-color: rgb(40, 43, 45);
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
@@ -40,5 +42,25 @@
   }
   .chat_sin_mensajes {
     height: 600px;
+  }
+}
+
+/* Tablet Pequeña / Móvil Grande*/
+@media (max-height: 775px) {
+  .chat {
+    height: 500px;
+  }
+  .chat_sin_mensajes {
+    height: 500px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 675px) {
+  .chat {
+    height: 640px;
+  }
+  .chat_sin_mensajes {
+    height: 640px;
   }
 }

@@ -23,3 +23,13 @@ button:hover,
 button:active {
   background-color: #5a88ce;
 }
+
+/* Móvil */
+@media (max-width: 675px) {
+  .input {
+    width: 75%;
+  }
+  button {
+    width: 25%;
+  }
+}

@@ -17,11 +17,13 @@ const helperFunction = async (user) => {
       chats: [],
     });
   }
+
   addDocWithDate("users", user.uid, {
     displayName,
     photoURL,
     email,
     uid,
+    online: true,
   });
 };
 

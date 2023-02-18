@@ -37,6 +37,10 @@ const emailValidator = (email) => {
   return /^[a-z0-9.]{1,64}@[a-z0-9.]{1,64}[a-z0-9]{2,4}$/i.test(email);
 };
 
+const secondsToDate = (seconds) => {
+  return new Date(seconds * 1000); // Epoch
+};
+
 export {
   userExists,
   addDocWithDate,
@@ -44,4 +48,5 @@ export {
   getCollection,
   getDocRef,
   emailValidator,
+  secondsToDate,
 };

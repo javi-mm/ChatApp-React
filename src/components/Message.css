@@ -17,7 +17,7 @@
   max-width: 80%;
   height: auto;
   border-radius: 15px;
-  padding: 15px;
+  padding: 15px 5px 3px 10px;
   text-align: center;
   text-justify: auto;
   background-color: rgb(121, 121, 140);
@@ -28,9 +28,24 @@
   max-width: 80%;
   height: auto;
   border-radius: 15px;
-  padding: 15px;
+  padding: 15px 5px 3px 10px;
   text-align: center;
   text-justify: auto;
   background-color: #396bb2;
   color: rgb(244, 244, 244);
+}
+
+.message_date {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 13px;
+}
+
+/* Móvil */
+@media (max-width: 675px) {
+  .message_text,
+  .self_message_text {
+    padding: 9px 5px 3px 9px;
+  }
 }

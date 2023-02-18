@@ -50,3 +50,33 @@
     width: 750px;
   }
 }
+
+/* Tablet Pequeña / Movil Grande*/
+@media (max-width: 775px) {
+  .card {
+    width: 650px;
+  }
+}
+@media (max-height: 775px) {
+  .card {
+    height: 650px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 675px) {
+  .card {
+    width: 550px;
+  }
+}
+
+@media (max-width: 575px) {
+  .card {
+    width: 500px;
+  }
+}
+@media (max-width: 515px) {
+  .card {
+    width: 365px;
+  }
+}

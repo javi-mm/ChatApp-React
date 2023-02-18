@@ -1,13 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/usercontext";
 import { uuidv4 } from "@firebase/util";
-import {
-  arrayUnion,
-  doc,
-  serverTimestamp,
-  Timestamp,
-  updateDoc,
-} from "firebase/firestore";
+import { arrayUnion, doc, Timestamp, updateDoc } from "firebase/firestore";
 import { ChatContext } from "../context/chatcontext";
 import { db } from "../../firebase";
 import "./Input.css";
