@@ -5,7 +5,6 @@ import { AuthContext } from "./context/usercontext";
 
 function App() {
   const currentUser = useContext(AuthContext);
-  console.log(currentUser, "currentUser");
   return <>{currentUser ? <MainPage /> : <Login />}</>;
 }
 

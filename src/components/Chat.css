@@ -48,19 +48,9 @@
 }
 
 /* Móvil */
-@media (max-width: 675px) {
-  .chat {
-    height: 650px;
-  }
-  .chat_sin_mensajes {
-    height: 650px;
-  }
-}
+
 @media (max-width: 575px) {
-  .chat {
-    height: 600px;
-  }
   .chat_sin_mensajes {
-    height: 600px;
+    text-align: center;
   }
 }

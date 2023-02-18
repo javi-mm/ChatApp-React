@@ -13,7 +13,7 @@
   color: aliceblue;
   background-color: #16386b;
   font-size: 14px;
-  text-indent: 20px;
+  text-indent: 72px;
   overflow: hidden;
   margin-bottom: 10px;
 }
@@ -46,9 +46,32 @@ img {
   margin-bottom: 10px;
 }
 
+@media (max-width: 935px) {
+  .input_search {
+    text-indent: 60px;
+  }
+}
+
 /* Móvil */
+@media (max-width: 775px) {
+  .input_search {
+    text-indent: 40px;
+  }
+}
 @media (max-width: 675px) {
   .input_search {
-    text-indent: 2px;
+    text-indent: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .input_search {
+    text-indent: 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  .input_search {
+    text-indent: 4px;
   }
 }

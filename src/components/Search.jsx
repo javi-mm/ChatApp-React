@@ -105,7 +105,7 @@ const Search = (props) => {
       <div className="search_div">
         <input
           type="text"
-          placeholder="Busca amigos por email..."
+          placeholder="Busca email..."
           onChange={handleChange}
           value={enteredEmail}
           onKeyDown={handleSearchOnEnter}

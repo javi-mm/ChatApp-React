@@ -14,13 +14,21 @@
   height: 600px;
   width: 600px;
 }
+.login h1 {
+  font-size: 60px;
+  color: #104ca6;
+}
+.login h2 {
+  margin-top: 40px;
+  font-size: 30px;
+}
 
 .login_button {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-top: 40px;
+  margin-top: 20px;
   height: 50px;
   width: 50%;
   padding: 20px 0px;
