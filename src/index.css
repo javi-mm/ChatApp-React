@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Gentium Book Plus";
-  src: url("./fonts/GentiumBookPlus-Regular.ttf");
+  src: url("/fonts/GentiumBookPlus-Regular.ttf");
 }
 * {
   box-sizing: border-box;
