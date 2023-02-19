@@ -44,6 +44,8 @@ img {
 }
 .error_message {
   margin-bottom: 10px;
+  margin-left: 3px;
+  text-align: center;
 }
 
 @media (max-width: 935px) {

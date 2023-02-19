@@ -94,7 +94,7 @@ const Search = (props) => {
   return (
     <>
       {error && (
-        <p className="error_message">No se pudo encontrar al usuario</p>
+        <div className="error_message">No se pudo encontrar al usuario</div>
       )}
       {user && !error && (
         <div className="search_user" onClick={handleButton}>
