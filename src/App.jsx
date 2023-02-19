@@ -1,11 +1,15 @@
-import { useContext } from "react";
 import Login from "./pages/Login";
 import MainPage from "./pages/MainPage";
-import { AuthContext } from "./context/usercontext";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
+import Spinner from "./components/Spinner";
 
 function App() {
-  const currentUser = useContext(AuthContext);
-  return <>{currentUser ? <MainPage /> : <Login />}</>;
+  const [user, loading] = useAuthState(auth);
+
+  if (loading) return <Spinner />;
+
+  return <>{user ? <MainPage /> : <Login />}</>;
 }
 
 export default App;
