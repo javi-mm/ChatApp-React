@@ -59,7 +59,11 @@ const SideChat = (props) => {
       {user && (
         <div onClick={handleClick} className="sidechat">
           <div className="userphoto">
-            <img src={`${user.photoURL}`} alt="User photo" />
+            <img
+              src={`${user.photoURL}`}
+              alt="User photo"
+              referrerPolicy="no-referrer"
+            />
             <div
               className={`status ${user.online ? "online" : "offline"}`}
             ></div>
