@@ -6,16 +6,19 @@ import { auth, db } from "../../firebase";
 import { signOut } from "firebase/auth";
 import { doc, updateDoc } from "firebase/firestore";
 const User = () => {
-  const [chat, setChat] = useContext(ChatContext);
   const { photoURL, displayName, uid } = useContext(AuthContext);
 
   if (!photoURL || !displayName) return;
 
   return (
     <div className="currentuser">
-      <div className="currentuser_left">
-        <div className="currentuser_left_imagename">
-          <img src={`${photoURL}`} alt="Imagen del usuairo" />
+      <div className="current_user_with_logout">
+        <div className="currentuser_left">
+          <img
+            src={`${photoURL}`}
+            alt="Imagen del usuairo"
+            referrerPolicy="no-referrer"
+          />
           <p className="currentuser_left_username">
             {displayName.split(" ")[0]}
           </p>
@@ -32,10 +35,9 @@ const User = () => {
           }}
           className="currentuser_button"
         >
-          Logout
+          <div className="currenuser_button_image"></div>
         </button>
       </div>
-      <div className="currentuser_right">{chat.otherUser}</div>
     </div>
   );
 };

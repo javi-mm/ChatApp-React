@@ -2,9 +2,23 @@
   font-family: "Gentium Book Plus";
   src: url("/fonts/GentiumBookPlus-Regular.ttf");
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.woff");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Gentium Book Plus", sans-serif;
+  font-family: "Roboto";
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #097fd9;
 }

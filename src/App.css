@@ -1,4 +1,4 @@
-.wrapper {
+/* .wrapper {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -35,10 +35,10 @@
   width: 75%;
   height: 100%;
   background-color: #16386b;
-}
+} */
 
 /* Tablet */
-@media (max-width: 935px) {
+/* @media (max-width: 935px) {
   .card {
     width: 750px;
   }
@@ -47,10 +47,10 @@
   .card {
     height: 700px;
   }
-}
+} */
 
 /* Tablet Pequeña / Movil Grande*/
-@media (max-width: 775px) {
+/* @media (max-width: 775px) {
   .card {
     width: 650px;
   }
@@ -59,10 +59,10 @@
   .card {
     height: 650px;
   }
-}
+} */
 
 /* Móvil */
-@media (max-width: 675px) {
+/* @media (max-width: 675px) {
   .card {
     width: 550px;
   }
@@ -77,4 +77,4 @@
   .card {
     width: 365px;
   }
-}
+} */

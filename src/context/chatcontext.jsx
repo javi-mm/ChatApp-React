@@ -6,12 +6,14 @@ export const ChatContextProvider = ({ children }) => {
   const [chat, setChat] = useState({
     id: "",
     otherUser: "",
+    photoUrl: "",
   });
 
-  const changeChat = (id, otherUser) => {
+  const changeChat = (id, otherUser, photoUrl) => {
     setChat({
       id,
       otherUser,
+      photoUrl,
     });
   };
 

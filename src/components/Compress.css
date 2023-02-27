@@ -1,0 +1,29 @@
+.compress_wrapper {
+  width: 403px;
+  height: 82px;
+  background-color: #1e1d3b;
+  border-radius: 11px 0px 0px 0px;
+}
+
+.logo_compress_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 22px 32px 22px;
+}
+
+.chat_logo_text {
+  width: 91px;
+  height: 20px;
+  background: transparent url("/logo.svg") 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.compress_logo {
+  width: 16px;
+  height: 16px;
+  background: transparent url("/compress.svg") 0% 0% no-repeat padding-box;
+  opacity: 1;
+  cursor: pointer;
+}

@@ -67,28 +67,55 @@ const Sidebar = () => {
   chatList.sort((a, b) => b.date - a.date);
 
   return (
-    <div className="sidebar_wrapper">
+    <>
       <Search chatList={chatList} />
-      <div>
-        {chatList.length >= 1 && (
-          <>
-            {chatList.map((chat) => {
-              const userEmail = chat.users.find((user) => {
-                return user !== email;
-              });
-              return (
-                <SideChat
-                  key={chat.id}
-                  userEmail={userEmail}
-                  chatId={chat.id}
-                ></SideChat>
-              );
-            })}
-          </>
-        )}
-        {}
+      <div className="sidebar_wrapper">
+        <div>
+          {chatList.length >= 1 && (
+            <>
+              {chatList.map((chat) => {
+                const userEmail = chat.users.find((user) => {
+                  return user !== email;
+                });
+                return (
+                  <SideChat
+                    key={chat.id}
+                    userEmail={userEmail}
+                    chatId={chat.id}
+                  ></SideChat>
+                );
+              })}
+
+              {/* <SideChat
+                key={"234jdashc"}
+                userEmail={"cappinatsu@gmail.com"}
+                chatId={"234jdashc"}
+              ></SideChat>
+              <SideChat
+                key={"234jdashc"}
+                userEmail={"cappinatsu@gmail.com"}
+                chatId={"234jdashc"}
+              ></SideChat>
+              <SideChat
+                key={"234jdashc"}
+                userEmail={"cappinatsu@gmail.com"}
+                chatId={"234jdashc"}
+              ></SideChat>
+              <SideChat
+                key={"234jdashc"}
+                userEmail={"cappinatsu@gmail.com"}
+                chatId={"234jdashc"}
+              ></SideChat>
+              <SideChat
+                key={"234jdashc"}
+                userEmail={"cappinatsu@gmail.com"}
+                chatId={"234jdashc"}
+              ></SideChat> */}
+            </>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

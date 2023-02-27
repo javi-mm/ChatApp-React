@@ -41,15 +41,19 @@ const Input = () => {
 
   return (
     <div className="input_wrap">
-      <input
-        type="text"
-        placeholder="Escribe un mensaje..."
-        onChange={textHandler}
-        onKeyDown={handleKey}
-        value={message}
-        className="input"
-      />
-      <button onClick={sendMessage}>Enviar</button>
+      <div className="input_and_button">
+        <input
+          type="text"
+          placeholder="Escribe un mensaje..."
+          onChange={textHandler}
+          onKeyDown={handleKey}
+          value={message}
+          className="input"
+        />
+        <button className="input_button" onClick={sendMessage}>
+          <div className="input_button_image"></div>
+        </button>
+      </div>
     </div>
   );
 };

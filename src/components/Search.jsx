@@ -90,31 +90,35 @@ const Search = (props) => {
     }
     setUser(null);
   };
-
+  console.log(user?.photoURL);
   return (
     <>
-      {error && (
-        <div className="error_message">No se pudo encontrar al usuario</div>
-      )}
-      {user && !error && (
-        <div className="search_user" onClick={handleButton}>
-          <img src={`${user.photoURL}`} alt="Foto de usuario" />
-          <p>{user.displayName.split(" ")[0]}</p>
-        </div>
-      )}
       <div className="search_div">
         <input
           type="text"
-          placeholder="Busca email..."
+          placeholder="Busca un usuario por email..."
           onChange={handleChange}
           value={enteredEmail}
           onKeyDown={handleSearchOnEnter}
           className="input_search"
         />
-        <button className="input_button" onClick={handleSearch}>
-          Buscar
+        <button className="search_button" onClick={handleSearch}>
+          <div className="search_button_image"></div>
         </button>
       </div>
+      {user && !error && (
+        <div className="search_user" onClick={handleButton}>
+          <img
+            src={`${user.photoURL}`}
+            alt="Foto de usuario"
+            referrerPolicy="no-referrer"
+          />
+          <p>{user.displayName.split(" ")[0]}</p>
+        </div>
+      )}
+      {error && (
+        <div className="error_message">No se pudo encontrar al usuario</div>
+      )}
     </>
   );
 };

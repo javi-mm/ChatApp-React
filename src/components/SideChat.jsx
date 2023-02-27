@@ -51,11 +51,15 @@ const SideChat = (props) => {
 
   const handleClick = () => {
     if (chat.id === newChatId) return;
-    changeChatIdFunction(newChatId, user.displayName.split(" ")[0]);
+    changeChatIdFunction(
+      newChatId,
+      user.displayName.split(" ")[0],
+      user.photoURL
+    );
   };
 
   return (
-    <div>
+    <>
       {user && (
         <div onClick={handleClick} className="sidechat">
           <div className="userphoto">
@@ -68,10 +72,18 @@ const SideChat = (props) => {
               className={`status ${user.online ? "online" : "offline"}`}
             ></div>
           </div>
-          <p className="sidechat_username">{user.displayName.split(" ")[0]}</p>
+          <div className="sidechat_text">
+            <p className="sidechat_username">
+              {user.displayName.split(" ")[0]}
+            </p>
+            <div className="last_message">
+              <p>Este es mi último mensaje del...</p>
+              <span>05:11 </span>
+            </div>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

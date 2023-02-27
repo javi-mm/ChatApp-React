@@ -1,52 +1,47 @@
 .currentuser {
+  width: 404px;
+  height: 113px;
+  background: #1a1a34 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 0px 10px;
+  opacity: 1;
+}
+.current_user_with_logout {
   display: flex;
-  width: 100%;
   align-items: center;
-  padding: 10px;
-  color: aliceblue;
-  background-color: #16386b;
+  justify-content: space-between;
+  padding: 35px 18px 31px 35px;
 }
 .currentuser_left {
-  width: 25%;
   display: flex;
   align-items: center;
-  gap: 20px;
+  column-gap: 22px;
 }
-.currentuser_left_imagename {
-  width: 50%;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.currentuser_right {
-  display: flex;
-  width: 75%;
-
-  justify-content: center;
-}
-img {
-  width: 30px;
-  height: 30px;
+.currentuser_left img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
-.currentuser_button {
-  height: 30px;
-  width: 60px;
-  border-radius: 10px;
-  background-color: #83aff1;
+.currentuser_left p {
+  font-size: 18px;
+  color: #f7f6ff;
 }
 
-/* Móvil */
-@media (max-width: 675px) {
-  .currentuser_left_username {
-    display: none;
-  }
-  .currentuser_left {
-    gap: 5px;
-    width: 42%;
-  }
-  .currentuser_right {
-    width: 58%;
-  }
+.currentuser_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fb3371;
+}
+.currentuser_button:hover {
+  background-color: #c62759;
+}
+.currenuser_button_image {
+  width: 15px;
+  height: 15px;
+  background: transparent url("/delete.png") 0% 0% no-repeat padding-box;
+  opacity: 1;
 }

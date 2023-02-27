@@ -1,79 +1,65 @@
 .search_div {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-}
-.input_search {
   width: 100%;
-  height: 20px;
+  display: flex;
+  align-items: center;
+  background: #1a1a34 0% 0% no-repeat padding-box;
+  padding-right: 18px;
+}
+
+.search_div input {
+  text-indent: 27px;
+  width: 376px;
+  height: 55px;
+  background: #1a1a34 0% 0% no-repeat padding-box;
   border: none;
+  font-size: 16px;
+  color: #f7f6ff;
+}
+.search_div input:focus {
   outline: none;
-  color: aliceblue;
-  background-color: #16386b;
-  font-size: 14px;
-  text-indent: 72px;
-  overflow: hidden;
-  margin-bottom: 10px;
+}
+.search_div input::placeholder {
+  color: #a39fc5;
+}
+.search_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #026bbc;
+}
+.search_button_image {
+  width: 13px;
+  height: 13px;
+  background: transparent url("/search.svg") 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
 .search_user {
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  gap: 10px;
-  margin-left: 5px;
-  margin-bottom: 10px;
 }
-
-img {
-  height: 80px;
-  width: 80px;
+.search_user img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
-.input_button {
-  height: 35px;
-  width: 70px;
-  border-radius: 5px;
-  font-size: 15px;
-  background-color: #83aff1;
-  cursor: pointer;
+.search_user p {
+  padding-left: 11px;
+  font-size: 16px;
+  color: #f7f6ff;
 }
+
 .error_message {
-  margin-bottom: 10px;
-  margin-left: 3px;
-  text-align: center;
-}
-
-@media (max-width: 935px) {
-  .input_search {
-    text-indent: 60px;
-  }
-}
-
-/* Móvil */
-@media (max-width: 775px) {
-  .input_search {
-    text-indent: 40px;
-  }
-}
-@media (max-width: 675px) {
-  .input_search {
-    text-indent: 30px;
-  }
-}
-
-@media (max-width: 575px) {
-  .input_search {
-    text-indent: 20px;
-  }
-}
-
-@media (max-width: 510px) {
-  .input_search {
-    text-indent: 4px;
-  }
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #fb3371;
 }

@@ -16,18 +16,20 @@ const Message = (props) => {
     <div
       key={props.id}
       className={` ${
-        props.sender == currentUser.email ? "self_message" : "message"
+        props.sender == currentUser.email
+          ? "message self_message"
+          : " message other_message"
       }`}
     >
       <div
         className={` ${
           props.sender == currentUser.email
-            ? "self_message_text"
-            : "message_text"
+            ? "message_text self_message_text"
+            : "message_text other_message_text"
         }`}
       >
         {props.text}
-        <div className="message_date">{props.date ? finalMessageTime : ""}</div>
+        {/* <div className="message_date">{props.date ? finalMessageTime : ""}</div> */}
       </div>
     </div>
   );

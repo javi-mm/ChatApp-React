@@ -1,52 +1,30 @@
+.message {
+  color: #ffffff;
+}
+
 .self_message {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  margin-right: 20px;
-  column-gap: 40px;
-  margin-bottom: 20px;
 }
-.message {
+
+.other_message {
   display: flex;
+  align-items: center;
   justify-content: flex-start;
-  margin-left: 20px;
-  column-gap: 40px;
-  margin-bottom: 20px;
 }
+
 .message_text {
-  min-width: 130px;
-  max-width: 80%;
+  width: auto;
+  max-width: 60%;
   height: auto;
-  border-radius: 15px;
-  padding: 15px 5px 3px 10px;
-  text-align: center;
-  text-justify: auto;
-  background-color: rgb(121, 121, 140);
-  color: rgb(244, 244, 244);
+  padding: 15px 24px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 .self_message_text {
-  min-width: 130px;
-  max-width: 80%;
-  height: auto;
-  border-radius: 15px;
-  padding: 15px 5px 3px 10px;
-  text-align: center;
-  text-justify: auto;
-  background-color: #396bb2;
-  color: rgb(244, 244, 244);
+  background-color: #026bbc;
 }
-
-.message_date {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  margin-top: 3px;
-  font-size: 13px;
-}
-
-/* Móvil */
-@media (max-width: 675px) {
-  .message_text,
-  .self_message_text {
-    padding: 9px 5px 3px 9px;
-  }
+.other_message_text {
+  background-color: #40406d;
 }

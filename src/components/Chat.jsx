@@ -5,6 +5,7 @@ import { ChatContext } from "../context/chatcontext";
 import { getCollection } from "../helpers/functions";
 import { db } from "../../firebase";
 import Message from "./Message";
+import TopChat from "./TopChat";
 
 const Chat = () => {
   const divRef = useRef();
@@ -38,26 +39,29 @@ const Chat = () => {
   }, [messages]);
 
   return (
-    <div
-      ref={divRef}
-      className={`${messages.length >= 1 ? "chat" : "chat_sin_mensajes"}`}
-    >
-      {messages.length >= 1 &&
-        messages.map((message) => {
-          return (
-            <Message
-              key={message.id}
-              id={message.id}
-              text={message.text}
-              sender={message.sender}
-              date={message.date}
-            ></Message>
-          );
-        })}
-      {messages.length == 0 && (
-        <p className="mensaje">Elige o crea un chat para empezar</p>
-      )}
-    </div>
+    <>
+      <TopChat />
+      <div
+        ref={divRef}
+        className={`${messages.length >= 1 ? "chat" : "chat_sin_mensajes"}`}
+      >
+        {messages.length >= 1 &&
+          messages.map((message) => {
+            return (
+              <Message
+                key={message.id}
+                id={message.id}
+                text={message.text}
+                sender={message.sender}
+                date={message.date}
+              ></Message>
+            );
+          })}
+        {messages.length == 0 && (
+          <p className="mensaje">Elige o crea un chat para empezar</p>
+        )}
+      </div>
+    </>
   );
 };
 
