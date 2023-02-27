@@ -22,19 +22,20 @@
   border-radius: 50%;
 }
 .status {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 19px;
   border-radius: 50%;
   position: absolute;
-  border: 1px solid #3b3b3b;
-  top: 70%;
+  border: 3px solid #1e1d3b;
+  top: 65%;
+  left: 22px;
 }
 
 .online {
-  background-color: rgb(25, 161, 25);
+  background-color: #68d653;
 }
 .offline {
-  background-color: #ccc;
+  background-color: #556092;
 }
 
 .sidechat_text {

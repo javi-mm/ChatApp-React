@@ -11,16 +11,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 800px;
+  background-color: #302e54;
 }
-.login h1 {
-  font-size: 61px;
-  color: #104ca6;
+
+.login_logo_img {
+  width: 250px;
+  height: 150px;
 }
 .login h2 {
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 30px;
+  color: #f7f6ff;
 }
 
 .login_button {
@@ -33,15 +36,18 @@
   width: 50%;
   padding: 20px 0px;
   border-radius: 8px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 30, 43);
-  border: 1px solid rgb(0, 30, 43);
+  background-color: #026bbc;
+  color: white;
   transition: all 0.2 ease-in-out;
 }
 .login_button:hover,
 .login_button:active {
-  background-color: #74aaf6;
-  color: white;
+  background-color: #05528c;
+}
+.login_button_image {
+  width: 50px;
+  height: 50px;
+  background: transparent url("/google.png") 0% 0% no-repeat padding-box;
 }
 .button_text {
   font-size: 18px;

@@ -1,5 +1,4 @@
 import "./Login.css";
-import googleLogo from "../assets/icons/google.png";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
 import {
@@ -42,10 +41,12 @@ const Login = () => {
   return (
     <div className="wrapper">
       <div className="login">
-        <h1>Chat App</h1>
+        <div className="login_logo">
+          <img src="/logo.svg" alt="Logo del chat" className="login_logo_img" />
+        </div>
         <h2>Inicia Sesión</h2>
         <button onClick={handleLogin} className="login_button">
-          <img src={googleLogo} alt="Logo de Google" />
+          <div className="login_button_image"></div>
           <p className="button_text">Google</p>
         </button>
       </div>
