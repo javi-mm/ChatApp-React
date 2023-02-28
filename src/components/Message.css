@@ -3,12 +3,14 @@
 }
 
 .self_message {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
 .other_message {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -27,4 +29,18 @@
 }
 .other_message_text {
   background-color: #40406d;
+}
+.self_message_date {
+  font-size: 10px;
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  color: #dbdada;
+}
+.other_message_date {
+  font-size: 10px;
+  position: absolute;
+  left: 6px;
+  bottom: 11px;
+  color: #dbdada;
 }

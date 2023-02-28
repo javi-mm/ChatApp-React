@@ -90,7 +90,6 @@ const Search = (props) => {
     }
     setUser(null);
   };
-  console.log(user?.photoURL);
   return (
     <>
       <div className="search_div">

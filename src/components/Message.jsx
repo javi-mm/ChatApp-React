@@ -7,11 +7,7 @@ import { Timestamp } from "firebase/firestore";
 const Message = (props) => {
   const currentUser = useContext(AuthContext);
   const messageTime = secondsToDate(props.date?.seconds);
-  const messageTimeSeconds =
-    messageTime.getMinutes().toString().length == 1
-      ? "0" + messageTime.getMinutes()
-      : messageTime.getMinutes();
-  const finalMessageTime = messageTime.getHours() + ":" + messageTimeSeconds;
+
   return (
     <div
       key={props.id}
@@ -29,7 +25,15 @@ const Message = (props) => {
         }`}
       >
         {props.text}
-        {/* <div className="message_date">{props.date ? finalMessageTime : ""}</div> */}
+        <div
+          className={` ${
+            props.sender == currentUser.email
+              ? "self_message_date"
+              : "other_message_date"
+          }`}
+        >
+          {messageTime}
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { ChatContext } from "../context/chatcontext";
 import { auth, db } from "../../firebase";
 import { signOut } from "firebase/auth";
 import { doc, updateDoc } from "firebase/firestore";
+
 const User = () => {
   const { photoURL, displayName, uid } = useContext(AuthContext);
 

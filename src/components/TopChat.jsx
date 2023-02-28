@@ -15,7 +15,7 @@ const TopChat = () => {
         />
         <div>
           <p>{currentChat.otherUser}</p>
-          <div className="top_chat_escribiendo">Está escribiendo...</div>
+          {/* <div className="top_chat_escribiendo">Está escribiendo...</div> */}
         </div>
       </div>
       <div className="top_chat_right">

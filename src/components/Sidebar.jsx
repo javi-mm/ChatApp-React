@@ -74,6 +74,9 @@ const Sidebar = () => {
           {chatList.length >= 1 && (
             <>
               {chatList.map((chat) => {
+                const lastMessage = chat.messages.findLast((message) => {
+                  return message.sender !== email;
+                });
                 const userEmail = chat.users.find((user) => {
                   return user !== email;
                 });
@@ -81,36 +84,11 @@ const Sidebar = () => {
                   <SideChat
                     key={chat.id}
                     userEmail={userEmail}
-                    chatId={chat.id}
+                    newChatId={chat.id}
+                    lastMessage={lastMessage}
                   ></SideChat>
                 );
               })}
-
-              {/* <SideChat
-                key={"234jdashc"}
-                userEmail={"cappinatsu@gmail.com"}
-                chatId={"234jdashc"}
-              ></SideChat>
-              <SideChat
-                key={"234jdashc"}
-                userEmail={"cappinatsu@gmail.com"}
-                chatId={"234jdashc"}
-              ></SideChat>
-              <SideChat
-                key={"234jdashc"}
-                userEmail={"cappinatsu@gmail.com"}
-                chatId={"234jdashc"}
-              ></SideChat>
-              <SideChat
-                key={"234jdashc"}
-                userEmail={"cappinatsu@gmail.com"}
-                chatId={"234jdashc"}
-              ></SideChat>
-              <SideChat
-                key={"234jdashc"}
-                userEmail={"cappinatsu@gmail.com"}
-                chatId={"234jdashc"}
-              ></SideChat> */}
             </>
           )}
         </div>

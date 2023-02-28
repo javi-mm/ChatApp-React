@@ -17,7 +17,6 @@ const MainPage = () => {
         </div>
         <div className="chat_right_side">
           <Chat />
-          <Input />
         </div>
       </div>
     </div>

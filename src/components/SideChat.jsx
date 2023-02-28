@@ -8,11 +8,10 @@ import {
 } from "firebase/firestore";
 import { db } from "../../firebase";
 import { ChatContext } from "../context/chatcontext";
+import { secondsToDate } from "../helpers/functions";
 import "./SideChat.css";
 
-const SideChat = (props) => {
-  const userEmail = props.userEmail;
-  const newChatId = props.chatId;
+const SideChat = ({ userEmail, newChatId, lastMessage }) => {
   const [user, setUser] = useState(null);
   const [chat, changeChatIdFunction] = useContext(ChatContext);
 
@@ -76,10 +75,17 @@ const SideChat = (props) => {
             <p className="sidechat_username">
               {user.displayName.split(" ")[0]}
             </p>
-            <div className="last_message">
-              <p>Este es mi último mensaje del...</p>
-              <span>05:11 </span>
-            </div>
+
+            {lastMessage && (
+              <div className="last_message">
+                <p>
+                  {lastMessage.text.split(" ").length > 5
+                    ? lastMessage.text.slice(0, 30) + "..."
+                    : lastMessage.text}
+                </p>
+                <span>{secondsToDate(lastMessage.date.seconds)}</span>
+              </div>
+            )}
           </div>
         </div>
       )}

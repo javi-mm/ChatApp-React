@@ -38,7 +38,14 @@ const emailValidator = (email) => {
 };
 
 const secondsToDate = (seconds) => {
-  return new Date(seconds * 1000); // Epoch
+  const messageTime = new Date(null);
+  messageTime.setTime(seconds * 1000);
+  const messageTimeSeconds =
+    messageTime.getMinutes().toString().length == 1
+      ? "0" + messageTime.getMinutes()
+      : messageTime.getMinutes();
+  const finalMessageTime = messageTime.getHours() + ":" + messageTimeSeconds;
+  return finalMessageTime;
 };
 
 export {

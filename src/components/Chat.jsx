@@ -6,6 +6,8 @@ import { getCollection } from "../helpers/functions";
 import { db } from "../../firebase";
 import Message from "./Message";
 import TopChat from "./TopChat";
+import Input from "./Input";
+import Search from "./Search";
 
 const Chat = () => {
   const divRef = useRef();
@@ -38,13 +40,32 @@ const Chat = () => {
     }
   }, [messages]);
 
+  if (!chat.id) {
+    console.log(chat);
+    return (
+      <>
+        <div className="chat_sin_id_wrapper">
+          <div className="chat_sin_id">
+            <h1>Te damos la bienvenida a</h1>
+            <img
+              src="/logo.svg"
+              alt="Logo del chat"
+              className="chat_sin_id_logo_img"
+            />
+            <div className="chat_sin_id_text">
+              <p>Empieza una conversación con quien tú quieras.</p>
+              <p>Tan solo busca el usuario mediante email.</p>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <TopChat />
-      <div
-        ref={divRef}
-        className={`${messages.length >= 1 ? "chat" : "chat_sin_mensajes"}`}
-      >
+      <div ref={divRef} className="chat">
         {messages.length >= 1 &&
           messages.map((message) => {
             return (
@@ -57,10 +78,8 @@ const Chat = () => {
               ></Message>
             );
           })}
-        {messages.length == 0 && (
-          <p className="mensaje">Elige o crea un chat para empezar</p>
-        )}
       </div>
+      <Input />
     </>
   );
 };
