@@ -9,7 +9,7 @@ import TopChat from "./TopChat";
 import Input from "./Input";
 import Search from "./Search";
 
-const Chat = () => {
+const Chat = ({ isChatSelected }) => {
   const divRef = useRef();
   const [chat, changeChat] = useContext(ChatContext);
   const [messages, setMessages] = useState([]);
@@ -41,7 +41,6 @@ const Chat = () => {
   }, [messages]);
 
   if (!chat.id) {
-    console.log(chat);
     return (
       <>
         <div className="chat_sin_id_wrapper">
@@ -64,7 +63,7 @@ const Chat = () => {
 
   return (
     <>
-      <TopChat />
+      <TopChat isChatSelected={isChatSelected} />
       <div ref={divRef} className="chat">
         {messages.length >= 1 &&
           messages.map((message) => {

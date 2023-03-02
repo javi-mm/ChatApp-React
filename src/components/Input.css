@@ -48,3 +48,18 @@
   height: 27px;
   background: transparent url("/send.png") 0% 0% no-repeat padding-box;
 }
+
+@media (max-width: 500px) {
+  .input_and_button,
+  .input {
+    width: 90%;
+  }
+  .input_wrap {
+    width: 100%;
+    height: 90px;
+  }
+  .input_and_button {
+    margin: 0;
+    column-gap: 10px;
+  }
+}

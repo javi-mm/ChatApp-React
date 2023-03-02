@@ -9,11 +9,14 @@ import {
 import { db } from "../../firebase";
 import { ChatContext } from "../context/chatcontext";
 import { secondsToDate } from "../helpers/functions";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 import "./SideChat.css";
 
-const SideChat = ({ userEmail, newChatId, lastMessage }) => {
+const SideChat = ({ userEmail, newChatId, lastMessage, isChatSelected }) => {
   const [user, setUser] = useState(null);
   const [chat, changeChatIdFunction] = useContext(ChatContext);
+  const { height, width } = useWindowDimensions();
+  const isMobileWidth = width <= "500";
 
   const searchUser = async (userEmail) => {
     const usersRef = collection(db, "users");
@@ -49,7 +52,15 @@ const SideChat = ({ userEmail, newChatId, lastMessage }) => {
   }, []);
 
   const handleClick = () => {
-    if (chat.id === newChatId) return;
+    if (chat.id === newChatId) {
+      if (isMobileWidth) {
+        isChatSelected();
+      }
+      return;
+    }
+    if (isMobileWidth) {
+      isChatSelected();
+    }
     changeChatIdFunction(
       newChatId,
       user.displayName.split(" ")[0],

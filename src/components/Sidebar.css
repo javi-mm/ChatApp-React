@@ -23,3 +23,9 @@
   background-color: #026bbc;
   border-radius: 100px;
 }
+
+@media (max-width: 500px) {
+  .sidebar_wrapper {
+    width: auto;
+  }
+}

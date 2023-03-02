@@ -45,3 +45,13 @@
   background: transparent url("/delete.png") 0% 0% no-repeat padding-box;
   opacity: 1;
 }
+
+@media (max-width: 500px) {
+  .currentuser {
+    width: auto;
+  }
+  .current_user_with_logout {
+    display: flex;
+    align-items: center;
+  }
+}

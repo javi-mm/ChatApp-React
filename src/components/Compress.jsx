@@ -1,7 +1,5 @@
 import React from "react";
 import "./Compress.css";
-import ChatLogo from "/logo.svg";
-import ChatLogoText from "/logo_no_text.svg";
 
 const Compress = () => {
   return (

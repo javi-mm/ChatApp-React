@@ -29,7 +29,6 @@ const Search = (props) => {
       const usersRef = collection(db, "users");
       const q = query(usersRef, where("email", "==", userEmail));
       try {
-        console.log(q);
         const querySnapshot = await getDocs(q);
         if (querySnapshot.empty) {
           setError(true);
@@ -61,6 +60,8 @@ const Search = (props) => {
   const handleSearch = () => {
     if (emailValidator(enteredEmail)) {
       setValidEmail(enteredEmail);
+    } else {
+      setError(true);
     }
   };
 
@@ -71,7 +72,7 @@ const Search = (props) => {
   const handleButton = async () => {
     const chat = chatList.filter((chat) => chat.users.includes(user.email));
     if (chat[0]) {
-      changeChatId(chat[0].id);
+      changeChatId(chat[0].id, user.displayName.split(" ")[0], user.photoURL);
     } else {
       const addNewChat = async () => {
         const newChatRef = doc(collection(db, "chats"));
@@ -97,6 +98,7 @@ const Search = (props) => {
           type="text"
           placeholder="Busca un usuario por email..."
           onChange={handleChange}
+          onPaste={handleChange}
           value={enteredEmail}
           onKeyDown={handleSearchOnEnter}
           className="input_search"

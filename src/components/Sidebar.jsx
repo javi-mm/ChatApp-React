@@ -13,7 +13,7 @@ import { db } from "../../firebase";
 import { AuthContext } from "../context/usercontext";
 import { getCollection } from "../helpers/functions";
 
-const Sidebar = () => {
+const Sidebar = ({ isChatSelected }) => {
   const { email } = useContext(AuthContext);
   const [chatList, setChatList] = useState([]);
 
@@ -86,6 +86,7 @@ const Sidebar = () => {
                     userEmail={userEmail}
                     newChatId={chat.id}
                     lastMessage={lastMessage}
+                    isChatSelected={isChatSelected}
                   ></SideChat>
                 );
               })}
