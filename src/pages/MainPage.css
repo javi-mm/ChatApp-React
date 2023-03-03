@@ -32,10 +32,6 @@
 }
 
 @media (max-width: 500px) {
-  .wrapper {
-    width: 90vw;
-    height: 90vh;
-  }
   .chat_window {
     width: 98%;
   }
