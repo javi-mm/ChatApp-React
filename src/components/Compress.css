@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 500px) {
   .compress_wrapper {
     width: auto;
   }
