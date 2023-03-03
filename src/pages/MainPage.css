@@ -32,6 +32,10 @@
 }
 
 @media (max-width: 500px) {
+  .wrapper {
+    width: 90vw;
+    height: 90vh;
+  }
   .chat_window {
     width: 98%;
   }
@@ -39,7 +43,7 @@
     width: 100%;
   }
 }
-@media (max-height: 850px) {
+@media (max-height: 900px) {
   .chat_window {
     height: 98%;
   }
